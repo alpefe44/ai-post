@@ -25,7 +25,7 @@ app.post("/generate", async (req, res) => {
         messages: [{ role: 'user', content: fullPrompt }],
     });
 
-    const text = aiResponse.data.choices[0].message.content;
+    const text = aiResponse.choices[0].message.content;
 
     console.log(text)
 
